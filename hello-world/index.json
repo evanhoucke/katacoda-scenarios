@@ -1,26 +1,60 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
+  "title": "Tutoriel Kis Hello",
+  "description": "Ce tutoriel vous permettra de réaliser une première application `Hello World` sur KIS Framework",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
-      "text": "step1.md"
+      "title": "Installation",
+      "text": "installation.md"
+    },{
+      "title": "Créer une Hello App",
+      "text": "helloApp.md"
+    },{
+      "title": "REST Hello World",
+      "text": "rest.md"
+    }, {
+      "title": "Hello qui ?",
+      "text": "helloQui.md"
+    },{
+      "title": "Ecran Hello who Autonome",
+      "text": "helloWho.md"
     }],
     "intro": {
+      "courseData": "courseData.sh",
+      "code": "code.sh",
       "text": "intro.md",
-      "credits": ""
+      "credits": "a-SIS Framework"
     },
+    "assets": {
+      "host01": [
+        {
+          "file": "config.sh",
+          "target": "~/"
+        }
+      ],
+      "client": [
+        {
+          "file": "config.sh",
+          "target": "~/"
+        },{
+          "file": "docker-compose.yml",
+          "target": "~/"
+        }
+    ]},
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "AppServer", "port": 8888, "host": "host01"}],
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uimessage1": "\u001b[32mVotre console interactive.\u001b[m\r\n",
+    "icon": "fa-java"
   },
   "backend": {
-    "imageid": "bash"
+    "port": 8888,
+    "imageid": "docker"
   }
 }

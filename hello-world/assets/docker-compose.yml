@@ -1,0 +1,10 @@
+kish:
+  image: docker.a-sis.eu/shell:0.29.0
+  volumes:
+    - /home/scrapbook/tutorial/source:/root/source
+
+kis:
+  image: docker.a-sis.eu/katacoda-hello:0.1.0
+  volumes:
+    - /home/scrapbook/tutorial/source/hello:/root/source
+  net: host
